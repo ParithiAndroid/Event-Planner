@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_nav_graph"
+    app:startDestination="@id/eventsFragment">
+
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.parithidb.taskiassessment.ui.event.EventsFragment"
+        android:label="Event Planner"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_eventsFragment_to_addEditEventFragment"
+            app:destination="@id/addEditEventFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditEventFragment"
+        android:name="com.parithidb.taskiassessment.ui.event.addEdit.AddEditEventFragment"
+        tools:layout="@layout/fragment_add_edit_event" >
+        <argument
+            android:name="eventId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+
+        <argument
+            android:name="eventTitle"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="eventDescription"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="eventDateAndTime"
+            app:argType="long"
+            android:defaultValue="0L" />
+
+    </fragment>
+
+</navigation>

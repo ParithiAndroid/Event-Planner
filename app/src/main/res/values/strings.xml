@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">taSki Assessment</string>
+    <string name="add_event">Add Event</string>
+    <string name="update_event">Update Event</string>
+    <string name="enter_event_title">Enter Event title</string>
+    <string name="select_date">Select Date</string>
+    <string name="enter_description">Enter description</string>
+    <string name="select_time">Select Time</string>
+    <string name="no_upcoming_events">No Upcoming Events...</string>
+    <string name="no_events_found_for_selected_date">No events found for selected date.</string>
+</resources>
